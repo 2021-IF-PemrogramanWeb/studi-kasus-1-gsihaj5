@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>User Login Form</title>
-    @include('auth.user.style')
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -15,7 +14,7 @@
         <img src="img/bg.svg">
     </div>
     <div class="login-content">
-        <form method="post" action="" autocomplete="off">
+        <form method="post" action="./php/auth/login.php" autocomplete="off">
             <img src="img/profile_pic.svg">
             <h2 class="title">Welcome</h2>
             <div class="input-div one">
@@ -35,7 +34,7 @@
                 </div>
             </div>
             <a href="#">Forgot Password?</a>
-            <input type="submit" class="btn" value="Login">
+            <input type="submit" name="submit_button" class="btn" value="Login">
         </form>
     </div>
 </div>

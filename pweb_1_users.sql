@@ -1,0 +1,10 @@
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (1, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'gsihaj5', 20);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (3, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'a', 20);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (4, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'b', 30);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (5, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'c', 30);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (6, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'd', 40);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (7, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'e', 70);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (8, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'f', 20);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (9, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'g', 30);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (10, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', 'h', 20);
+INSERT INTO pweb_1.users (id, name, password, email, username, age) VALUES (11, 'Gerruy', '$2y$10$OpgmIWYa3PI4VlsiDMqSfOsb9j21doPvX/zs8PGrbse/AJUws33wu', 'gsihaj5@gmail.com', '1', 19);

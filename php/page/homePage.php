@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 </head>
 <body class="container">
+<form method="post" action="../auth/logout.php" autocomplete="off">
+    <input type="submit" class="btn btn-danger" value="Logout"></input>
+</form>
 <div class="row">
     <div class="col">
         <div class="table-wrapper card">
@@ -61,10 +64,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 <script>
-    let data1 = [];
-    data1.push(10)
-    data1.push(2)
-    let context = document.getElementById('bar').getContext('2d');
+	let data1 = []
+	data1.push(10)
+	data1.push(2)
+	let context = document.getElementById('bar').getContext('2d')
 
     <?php
     $all_user = mysqli_query($conn,
@@ -82,44 +85,44 @@
     }
     ?>
 
-    let salesChartData = {
-        labels: [
+	let salesChartData = {
+		labels: [
             <?php
             foreach ($age as $key => $value)
                 echo "$key,";
             ?>
-        ],
-        datasets: [
-            {
-                label: 'Digital Goods',
-                backgroundColor: 'rgba(60,141,188,0.9)',
-                borderColor: 'rgba(60,141,188,0.8)',
-                pointRadius: false,
-                pointColor: '#3b8bba',
-                pointStrokeColor: 'rgba(60,141,188,1)',
-                pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(60,141,188,1)',
-                data: [
+		],
+		datasets: [
+			{
+				label: 'Digital Goods',
+				backgroundColor: 'rgba(60,141,188,0.9)',
+				borderColor: 'rgba(60,141,188,0.8)',
+				pointRadius: false,
+				pointColor: '#3b8bba',
+				pointStrokeColor: 'rgba(60,141,188,1)',
+				pointHighlightFill: '#fff',
+				pointHighlightStroke: 'rgba(60,141,188,1)',
+				data: [
                     <?php
                     foreach ($age as $key => $value)
                         echo "$value,";
                     ?>
-                ]
-            },
-        ]
-    }
+				]
+			},
+		]
+	}
 
-    let salesChartOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-            display: false
-        },
-    }
-    let salesChart = new Chart(context, { // lgtm[js/unused-local-variable]
-        type: 'line',
-        data: salesChartData,
-        options: salesChartOptions
-    })
+	let salesChartOptions = {
+		maintainAspectRatio: false,
+		responsive: true,
+		legend: {
+			display: false
+		},
+	}
+	let salesChart = new Chart(context, { // lgtm[js/unused-local-variable]
+		type: 'line',
+		data: salesChartData,
+		options: salesChartOptions
+	})
 </script>
 </html>

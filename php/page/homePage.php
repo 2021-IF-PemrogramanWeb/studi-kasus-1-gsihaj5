@@ -1,3 +1,10 @@
+<?php
+
+if (!isset($_SESSION['userId']) || !isset($_SESSION['userName'])) exit();
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,7 +60,7 @@
 
 </body>
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="%PUBLIC_URL%/https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -61,10 +68,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 <script>
-    let data1 = [];
-    data1.push(10)
-    data1.push(2)
-    let context = document.getElementById('bar').getContext('2d');
+	let data1 = []
+	data1.push(10)
+	data1.push(2)
+	let context = document.getElementById('bar').getContext('2d')
 
     <?php
     $all_user = mysqli_query($conn,
@@ -82,44 +89,44 @@
     }
     ?>
 
-    let salesChartData = {
-        labels: [
+	let salesChartData = {
+		labels: [
             <?php
             foreach ($age as $key => $value)
                 echo "$key,";
             ?>
-        ],
-        datasets: [
-            {
-                label: 'Digital Goods',
-                backgroundColor: 'rgba(60,141,188,0.9)',
-                borderColor: 'rgba(60,141,188,0.8)',
-                pointRadius: false,
-                pointColor: '#3b8bba',
-                pointStrokeColor: 'rgba(60,141,188,1)',
-                pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(60,141,188,1)',
-                data: [
+		],
+		datasets: [
+			{
+				label: 'Digital Goods',
+				backgroundColor: 'rgba(60,141,188,0.9)',
+				borderColor: 'rgba(60,141,188,0.8)',
+				pointRadius: false,
+				pointColor: '#3b8bba',
+				pointStrokeColor: 'rgba(60,141,188,1)',
+				pointHighlightFill: '#fff',
+				pointHighlightStroke: 'rgba(60,141,188,1)',
+				data: [
                     <?php
                     foreach ($age as $key => $value)
                         echo "$value,";
                     ?>
-                ]
-            },
-        ]
-    }
+				]
+			},
+		]
+	}
 
-    let salesChartOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-            display: false
-        },
-    }
-    let salesChart = new Chart(context, { // lgtm[js/unused-local-variable]
-        type: 'line',
-        data: salesChartData,
-        options: salesChartOptions
-    })
+	let salesChartOptions = {
+		maintainAspectRatio: false,
+		responsive: true,
+		legend: {
+			display: false
+		},
+	}
+	let salesChart = new Chart(context, { // lgtm[js/unused-local-variable]
+		type: 'line',
+		data: salesChartData,
+		options: salesChartOptions
+	})
 </script>
 </html>

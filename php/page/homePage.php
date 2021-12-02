@@ -17,6 +17,9 @@ if (!isset($_SESSION['userId']) || !isset($_SESSION['userName'])) exit();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 </head>
 <body class="container">
+<form method="post" action="../auth/logout.php" autocomplete="off">
+    <input type="submit" class="btn btn-danger" value="Logout"></input>
+</form>
 <div class="row">
     <div class="col">
         <div class="table-wrapper card">
